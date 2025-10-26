@@ -67,8 +67,8 @@
 
 /* 标题样式 */
 .v-card__title {
-    font-size: 1.25rem !important;
-    font-weight: 200 !important;
+    font-size: 1.5rem !important;
+    font-weight: 300 !important;
     letter-spacing:.0125em !important;
     padding: 16px 24px 8px !important; /* 底部留白 */
 }
