@@ -140,6 +140,7 @@ html.dialog-open-no-scroll {
 
 /* 标题样式 */
 .v-card__title {
+    color: rgba(33, 33, 33, 0.957) !important;
     font-size: 1.55rem !important;
     font-weight: 440 !important;
     letter-spacing:.0125em !important;
