@@ -140,8 +140,8 @@ html.dialog-open-no-scroll {
 
 /* 标题样式 */
 .v-card__title {
-    font-size: 1.5rem !important;
-    font-weight: 450 !important;
+    font-size: 1.55rem !important;
+    font-weight: 440 !important;
     letter-spacing:.0125em !important;
     padding: 18px 24px 5px !important; /* 底部留白 */
 }
