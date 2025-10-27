@@ -1,5 +1,78 @@
-/* ---------------------- 弹窗的基础样式 ---------------------- */
+/* ---------------------- 开始界面样式 ---------------------- */
+.modal {
+    /* 默认隐藏 */
+    display: none; 
+    /* 固定定位，覆盖整个视口 */
+    position: fixed; 
+    z-index: 220; /* 确保它在其他内容之上 */
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    /* 背景半透明黑色 */
+    background-color: rgba(0, 0, 0, 0.4); 
+    /* 使用 Flexbox 居中内容 */
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+}
 
+/* 2. 模态框内容区域 */
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 8px; /* 圆角 */
+    width: 80%; /* 宽度适中 */
+    max-width: 500px; /* 最大宽度 */
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+/* 3. 标题样式 */
+.modal-content h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.25em;
+    font-weight: 500;
+    padding: 10px 10px;
+    margin-bottom: 20px;
+}
+
+/* 4. 按钮样式 */
+.selection-btn {
+    background-color: rgb(4, 101, 55);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.selection-btn:hover {
+    background-color: rgba(4, 101, 56, 0.74);
+}
+
+/* 5. 示例：触发弹窗的按钮 */
+#openModalBtn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 15px;
+    font-size: 18px;
+}
+.hidden { display: none; }
+/* ---------------------- 弹窗的基础样式 ---------------------- */
+    /* 锁定滚动 */
+html.dialog-open-no-scroll {
+    overflow: hidden !important;
+}
 /* 模拟背景和居中容器：覆盖整个视口，灰色透明背景，内容居中 */
 .v-dialog__content {
     /* 默认隐藏，通过 JS 控制 display: block/none */
@@ -24,7 +97,7 @@
     /* 默认隐藏，通过 JS 切换 class 或 display: none/block */
     /* 当使用 display: none/block 时，过渡会失效！ */
     /* 所以必须使用 opacity 和 visibility/pointer-events 来控制显示/隐藏 */
-    visibility: hidden;
+    visibility: hiddeen;
     pointer-events: none; /* 隐藏时禁止点击 */
 }
 /* 3. 显示状态：设置一个激活类（比如叫 .dialog-open） */
@@ -67,8 +140,8 @@
 
 /* 标题样式 */
 .v-card__title {
-    font-size: 1.5rem !important;
-    font-weight: 450 !important;
+    font-size: 1.25rem !important;
+    font-weight: 500 !important;
     letter-spacing:.0125em !important;
     padding: 16px 24px 8px !important; /* 底部留白 */
 }
