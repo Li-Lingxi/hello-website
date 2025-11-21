@@ -15,17 +15,15 @@ document.addEventListener("DOMContentLoaded", function() {
   return "#" + prefix + randomPart;
   }
 
-/*  document.getElementById('booking1').innerText = generateBookingNum() + ' 运动时 ¥5';
-  document.getElementById('booking2').innerText = generateBookingNum() + ' 运动时 ¥5';
-  document.getElementById('booking3').innerText = generateBookingNum() + ' 运动时 ¥5';
-*/
   // 日期获取与计算
   const today = new Date();
   const dayAfterTomorrow = new Date(today);
   const tomorrow = new Date(today);
   const yesterDay = new Date(today);
   const dayBeforeYesterDay = new Date(today);
+  const fourDaysAgo = new Date(today)
 
+  fourDaysAgo.setDate(today.getDate()-4);
   dayAfterTomorrow.setDate(today.getDate()+2);
   dayBeforeYesterDay.setDate(today.getDate()-2);
   tomorrow.setDate(today.getDate()+1);
@@ -39,10 +37,6 @@ document.addEventListener("DOMContentLoaded", function() {
     return `${year}年${month}月${day}日`;
   }
 
-/*  document.getElementById('date1').innerText = formatDate(tomorrow);
-  document.getElementById('date2').innerText = formatDate(today);
-  document.getElementById('date3').innerText = formatDate(yesterday);
-*/
   //生成卡片函数
   function generateCard(sport, date, showExtra = false) {
     let title = "标题缺失";
@@ -53,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (sport === "gym") {
       title = "南校园新体育馆健身房";
       place = "南校园新体育馆健身房-场地1";
-      timeRange = "20:00 - 22:00";
+      timeRange = "18:00 - 20:00";
     }else if (sport === "swim") {
       title = "南校园游泳池";
       place = "南校园游泳池-场地1";
@@ -98,8 +92,8 @@ document.addEventListener("DOMContentLoaded", function() {
       modal.classList.add('hidden');
       const cardA = generateCard('gym', dayAfterTomorrow, true);
       const cardB = generateCard('gym', today, false);
-      const cardC = generateCard('swim', yesterDay, false);
-      const cardD = generateCard('gym', dayBeforeYesterDay, false);
+      const cardC = generateCard('gym', dayBeforeYesterDay, false);
+      const cardD = generateCard('gym', fourDaysAgo, false);
       cardsContainer.innerHTML = cardA + cardB + cardC + cardD;
     };
     document.getElementById('swim').onclick = () => {
