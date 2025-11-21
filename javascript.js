@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (sport === "gym") {
       title = "南校园新体育馆健身房";
       place = "南校园新体育馆健身房-场地1";
-      timeRange = "18:00 - 20:00";
+      timeRange = "20:00 - 22:00";
     }else if (sport === "swim") {
       title = "南校园游泳池";
       place = "南校园游泳池-场地1";
